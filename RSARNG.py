@@ -70,7 +70,7 @@ def decrypt(pk, ciphertext):
     plain = [chr((char ** key) % n) for char in ciphertext]
     return ''.join(plain)
 
-r = requests.get('https://www.random.org/integers/?num=10000&min=1000&max=1000000000&col=1&base=10&format=plain&rnd=new')
+r = requests.get('https://www.random.org/integers/?num=100&min=100&max=10000&col=1&base=10&format=plain&rnd=new')
 c = r.text
 soup = BeautifulSoup(c)
 list = soup.prettify()
